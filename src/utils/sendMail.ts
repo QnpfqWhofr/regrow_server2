@@ -1,19 +1,21 @@
 // server/src/utils/sendMail.ts
 import sgMail from "@sendgrid/mail";
+import dotenv from "dotenv";
+dotenv.config();
 
 const DEFAULT_FROM = process.env.MAIL_FROM || "dsmhwjh0627@dgsw.hs.kr";
-const SENDGRID_API_KEY = "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";
+const SENDGRID_API_KEYEE = process.env.SENDGRID_API_KEY;
 
 // SendGrid API 키 설정
-if (SENDGRID_API_KEY) {
-  sgMail.setApiKey(SENDGRID_API_KEY);
+if (SENDGRID_API_KEYEE) {
+  sgMail.setApiKey(SENDGRID_API_KEYEE);
 } else {
   console.warn("SendGrid API Key가 설정되지 않았습니다. 메일 전송이 실패할 수 있습니다.");
 }
 
 export async function sendMail(to: string | string[], subject: string, html: string) {
   try {
-    if (!SENDGRID_API_KEY) {
+    if (!SENDGRID_API_KEYEE) {
       console.error("SendGrid API Key가 없습니다.");
       return false;
     }
