@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx watch app.ts",
     "build": "tsc",
-    "start": "node app.ts"
+    "start": "npm run dev"
   },
   "keywords": [],
   "author": "",
