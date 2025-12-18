@@ -8,14 +8,14 @@ import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 
 // 기존 라우터
-import authRouter from "./routes/auth";
+import authRouter from "./routes/auth.js";
 // 새 라우터 추가
-import productsRouter from "./routes/products";
-import uploadRouter from "./routes/upload";
-import chatRouter from "./routes/chat";
-import reviewRouter from "./routes/reviews";
+import productsRouter from "./routes/products.js";
+import uploadRouter from "./routes/upload.js";
+import chatRouter from "./routes/chat.js";
+import reviewRouter from "./routes/reviews.js";
 // 스케줄러
-import { startProductScheduler } from "./utils/productScheduler";
+import { startProductScheduler } from "./utils/productScheduler.js";
 
 const app = express();
 
