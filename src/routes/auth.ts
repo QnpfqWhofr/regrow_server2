@@ -8,15 +8,15 @@ import rateLimit from "express-rate-limit";
 import { z } from "zod";
 import bcrypt from "bcryptjs";
 
-import EmailCode from "../models/EmailCode";
-import User from "../models/User";
+import EmailCode from "../models/EmailCode.js";
+import User from "../models/User.js";
 import {
   signUser,
   setAuthCookie,
   clearAuthCookie,
   readUserFromReq,
-} from "../utils/authToken";
-import { sendMail } from "../utils/sendMail";
+} from "../utils/authToken.js";
+import { sendMail } from "../utils/sendMail.js";
 
 
 
