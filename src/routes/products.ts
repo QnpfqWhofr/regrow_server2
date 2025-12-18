@@ -3,9 +3,9 @@ import { z } from "zod";
 import { Types } from "mongoose";
 import fs from "fs/promises";
 import path from "path";
-import Product from "../models/Product";
-import User from "../models/User";
-import { readUserFromReq } from "../utils/authToken";
+import Product from "../models/Product.js";
+import User from "../models/User.js";
+import { readUserFromReq } from "../utils/authToken.js";
 
 const router = Router();
 const HISTORY_LIMIT = 50;

@@ -1,5 +1,5 @@
 // server/src/utils/testSendGrid.ts
-import { sendMail } from "./sendMail";
+import { sendMail } from "./sendMail.js";
 
 export async function testSendGridConnection() {
   console.log("SendGrid 연결 테스트 시작...");

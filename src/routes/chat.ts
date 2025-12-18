@@ -2,9 +2,9 @@ import { Router } from "express";
 import { Types } from "mongoose";
 import { z } from "zod";
 
-import ChatRoom from "../models/ChatRoom";
-import Product from "../models/Product";
-import { readUserFromReq } from "../utils/authToken";
+import ChatRoom from "../models/ChatRoom.js";
+import Product from "../models/Product.js";
+import { readUserFromReq } from "../utils/authToken.js";
 
 const router = Router();
 

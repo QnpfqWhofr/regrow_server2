@@ -3,7 +3,7 @@ import type { Request, Response } from "express";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
-import { readUserFromReq } from "../utils/authToken";
+import { readUserFromReq } from "../utils/authToken.js";
 
 const router = Router();
 

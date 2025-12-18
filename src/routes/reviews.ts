@@ -2,10 +2,10 @@ import { Router } from "express";
 import { z } from "zod";
 import fs from "fs/promises";
 import path from "path";
-import Review from "../models/Review";
-import User from "../models/User";
-import Product from "../models/Product";
-import { readUserFromReq } from "../utils/authToken";
+import Review from "../models/Review.js";
+import User from "../models/User.js";
+import Product from "../models/Product.js";
+import { readUserFromReq } from "../utils/authToken.js";
 
 const router = Router();
 
